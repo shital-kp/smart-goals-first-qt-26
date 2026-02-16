@@ -22,10 +22,12 @@ const page = async () => {
     name: string;
     age: string;
     email: string;
+    countryName?: string
   } = {
     name: 'Shital',
     age: '75',
-    email: 'shital@gmail.com'
+    email: 'shital@gmail.com',
+    countryName: 'India'
   };
 
   const { name, age, email } = user;
