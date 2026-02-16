@@ -32,11 +32,11 @@ const page = async () => {
   console.log(name); // 'Shital'
 
   //Renaming/aliasing variables
-  const { name: userName, age: userAge, email: userEmail } = user;
-  console.log("Name: ", userName) // 'Shital'
+  const { name: userName2, age: userAge, email: userEmail } = user;
+  console.log("Name: ", userName2) // 'Shital'
 
   // Default values
-  const { userName, countryName = 'India' } = user;
+  const { userName2, countryName = 'India' } = user;
   console.log(countryName); // 'India'
 
 
