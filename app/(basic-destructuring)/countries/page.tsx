@@ -18,7 +18,11 @@ const page = async () => {
   console.log(c); // yellow
 
   //Object destructuring === === === 
-    const user = {
+  const user: {
+    name: string;
+    age: string;
+    email: string;
+  } = {
     name: 'Shital',
     age: '75',
     email: 'shital@gmail.com'
@@ -32,7 +36,7 @@ const page = async () => {
   console.log("Name: ", userName) // 'Shital'
 
   // Default values
-  const { personName, countryName = 'India' } = user;
+  const { userName, countryName = 'India' } = user;
   console.log(countryName); // 'India'
 
 
