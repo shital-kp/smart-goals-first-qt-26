@@ -21,18 +21,18 @@ const page = () => {
   // ['India', 'China', 'Bangladesh', 'Japan']
 
   const americanPopulations = countries
-  .filter(({ region }) => region === "Americas")
-  .map(({ name: { common: name }, population }) => ({
-    country: name,
-    population: population,
-    formatted: `${(population / 1000000).toFixed(1)}M`
-  }));
+    .filter(({ region }) => region === "Americas")
+    .map(({ name: { common: name }, population }) => ({
+      country: name,
+      population: population,
+      formatted: `${(population / 1000000).toFixed(1)}M`
+    }));
 
   console.log(americanPopulations);
   // [
   //   { country: 'USA', population: 331893745, formatted: '331.9M' },
   //   { country: 'Brazil', population: 212559417, formatted: '212.6M' }
-  // ]
+  // ]  
 
   // Get top 3 most populated countries in Asia
   const topAsianCountries = countries

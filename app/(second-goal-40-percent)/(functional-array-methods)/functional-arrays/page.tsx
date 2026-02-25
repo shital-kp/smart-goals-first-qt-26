@@ -1,5 +1,5 @@
+'use client';
 //Functional Array Methods
-
 const page = () => {
 
   // Example 1: Simple transformation
@@ -24,7 +24,7 @@ const page = () => {
     email: `${name.toLowerCase()}@gmail.com`
   }));
 
-  console.log('** Users **: ', users1); 
+  console.log('** Users **: ', users1);
   // [
   //   { id: 1, name: 'Alice', email: 'alice@gmail.com' },
   //   { id: 2, name: 'Alpha', email: 'alpha@gmail.com' },
@@ -108,7 +108,7 @@ const page = () => {
   // countries grouped by region
   const countriesByRegion = countriesForReduce.reduce((grouped, country) => {
     const region = country.region;
-    //THe follo
+    //THe followwing line checks if the region key already exists in the grouped object. If it doesn't exist, it initializes it as an empty array. This ensures that we have an array to push country names into for each region.
     if (!grouped[region]) {
       grouped[region] = [];
     }

@@ -1,0 +1,168 @@
+$accent-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+$text-dark: #2d3436;
+$text-muted: #636e72;
+
+// Variables for the labels
+$server-bg: #c3edcf;
+$server-text: #1e8e3e;
+$client-bg: #c0d7ff;
+$client-text: #1a73e8;
+
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  padding: 64px 16px;
+  background-color: #f9f9fb;
+}
+
+.quoteCard {
+  position: relative;
+  width: 100%;
+  max-width: 800px; 
+  background: #ffffff;
+  padding: 64px;      
+  border-radius: 32px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.quoteMark {
+  position: absolute;
+  top: 16px;
+  left: 48px;
+  font-size: 192px;
+  font-family: serif;
+  color: #f1f2f6;
+  line-height: 1;
+  z-index: 0;
+  user-select: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 1;
+
+  .category {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 4px; // Adjusted for readability
+    color: #6c5ce7;
+    margin: 0;
+  }
+
+  // Label Logic Styles
+  .labelServer, .labelClient {
+    font-size: 11px;
+    font-weight: 800;
+    padding: 6px 14px;
+    border-radius: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+  }
+
+  .labelServer {
+    background-color: $server-bg;
+    color: $server-text;
+  }
+
+  .labelClient {
+    background-color: $client-bg;
+    color: $client-text;
+    animation: pulseIn 0.5s ease-out;
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+.quoteText {
+  font-size: 25px;
+  line-height: 1.4;
+  color: $text-dark;
+  font-weight: 600;
+  margin: 0;
+}
+
+.divider {
+  width: 96px;
+  height: 8px;
+  background: $accent-gradient;
+  border: none;
+  margin: 40px 0 24px 0;
+  border-radius: 16px;
+}
+
+.author {
+  color: $text-muted;
+  font-weight: 600;
+  font-style: normal;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  button {
+    padding: 10px 20px;
+    border: 1px solid #e0e0e0;
+    background-color: #ffffff;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: $text-dark;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #6c5ce7;
+      color: #ffffff;
+      border-color: #6c5ce7;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+
+  .authorName {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: right;
+    color: $text-muted;
+  }
+}
+
+.circle {
+  position: absolute;
+  bottom: -112px;
+  right: -112px;
+  width: 400px;
+  height: 400px;
+  background: $accent-gradient;
+  opacity: 0.06;
+  border-radius: 50%;
+  transition: transform 0.6s ease;
+}
+
+@keyframes pulseIn {
+  0% { transform: scale(0.9); opacity: 0; }
+  70% { transform: scale(1.05); }
+  100% { transform: scale(1); opacity: 1; }
+}

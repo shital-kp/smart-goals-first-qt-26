@@ -17,7 +17,7 @@ const page = async () => {
   const [a, b, c = 'yellow'] = ['red', 'green'];
   console.log(c); // yellow
 
-  //Object destructuring === === === 
+  //Object destructuring === === ===
   const user: {
     name: string;
     age: string;

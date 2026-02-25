@@ -5,26 +5,16 @@ type QueryType = {
 };
 
 //Types for countries response
-interface Country {
-  name: {
-    common: string;
-    official: string;
-  };
-  flags: {
-    png: string;
-    svg: string;
-    alt?: string;
-  };
-  region: string;
-  population: number;
+interface Quote {
+  
 }
 
-export async function getAllCountries(query: QueryType): Promise<Country[]> {
+export async function getQuote(query: QueryType): Promise<Quote[]> {
   if (query === undefined || query === null) {
     throw new Error('query is undefined!');
   }
 
-  const apiUrl = 'https://restcountries.com/v3.1/all?fields=name,flags,region,population,capital';
+  const apiUrl = 'https://dummyjson.com/quotes/randomss';
   let fetchUrl: string;
 
   if (query?.apiType === 'private') {
@@ -38,19 +28,15 @@ export async function getAllCountries(query: QueryType): Promise<Country[]> {
   }
 
   const res = await fetch(fetchUrl);
-
+  
   if (!res.ok) {
-    handleHttpError(fetchUrl, res.status, res.statusText);
+    throw new Error(`Failed to fetch quote data from ${fetchUrl} - Status: ${res.status} ${res.statusText}`);
   }
 
   const json = await res.json();
 
   if (!json || json?.length === 0) {
     throw new Error('The API returned an empty array or invalid data: ', json);
-  }
-
-  if (!Array.isArray(json)) {
-    throw new Error('The API response is not an array as expected: ', json);
   }
 
   return json;

@@ -1,5 +1,5 @@
 'use client';
-
+// Optional Chaining examples
 const page = () => {
 
   // 1. Without optional chaining (old way) === === === ===
