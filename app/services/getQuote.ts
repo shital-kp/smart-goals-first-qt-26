@@ -14,7 +14,7 @@ export async function getQuote(query: QueryType): Promise<Quote[]> {
     throw new Error('query is undefined!');
   }
 
-  const apiUrl = 'https://dummyjson.com/quotes/randomss';
+  const apiUrl = 'https://dummyjson.com/quotes/random';
   let fetchUrl: string;
 
   if (query?.apiType === 'private') {
