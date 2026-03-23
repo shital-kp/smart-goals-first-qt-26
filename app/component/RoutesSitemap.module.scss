@@ -1,0 +1,98 @@
+.card {
+  border: 1px solid #d6d6d6;
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: monospace;
+  font-size: 13px;
+  margin-bottom: 24px;
+  background: #ffffff;
+}
+
+.header {
+  background: #e4e2ff;
+  color: #4338ca;
+  padding: 8px 20px;
+  font-family: sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.tree {
+  padding: 14px 20px;
+  line-height: 1.9;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.connector {
+  color: #666;
+  user-select: none;
+}
+
+.root {
+  color: #555;
+}
+
+.group {
+  color: #5b50d6;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.subgroup {
+  color: #7c74e8;
+  font-style: italic;
+}
+
+.folder {
+  color: #333;
+  font-weight: 600;
+}
+
+.route {
+  color: #15803d;
+  font-weight: 600;
+}
+
+.pill {
+  margin-left: 8px;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 20px;
+  background: #d1fae5;
+  color: #065f46;
+  font-family: sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.pill:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.legend {
+  border-top: 1px solid #e5e5e5;
+  background: #f5f5f5;
+  padding: 8px 20px;
+  display: flex;
+  gap: 18px;
+  font-family: sans-serif;
+  font-size: 12px;
+  color: #666;
+}
+
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 6px;
+  vertical-align: middle;
+}
