@@ -1,0 +1,15 @@
+.headerWrapper {
+  width: 100%;
+  height: 70px;
+  padding: 15px 50px;
+  background-color: #495e6e;
+  margin-bottom: 20px;
+
+  .headerTitle a {
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  }
+}
